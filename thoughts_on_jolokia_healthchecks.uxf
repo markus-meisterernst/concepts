@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>430</y>
+      <w>240</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>/&lt;&lt;HealthCheckRegistry&gt;&gt;/
+
+InMemoryRegistry
+--
+collectionScripts</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>60</x>
+      <y>80</y>
+      <w>300</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+traditional Jolokia REST API
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>410</x>
+      <y>80</y>
+      <w>310</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+HealthCheckerScript 
+REST API
+
+used to create/update/delete 
+HealthChecking Scripts (e.g. JSON format)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>40</x>
+      <y>40</y>
+      <w>340</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+jolokia war</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>280</y>
+      <w>240</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>/&lt;&lt;HealthCheckExecution,/
+/HealthCheckScriptRegistry&gt;&gt;/
+
+JolkiaHealthCheckerMBean
+--
+registry: InMemoryRegistry</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>160</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>390</x>
+      <y>40</y>
+      <w>350</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+jolokia-healthchecks war</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>350</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>160</y>
+      <w>250</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+jolokia MBean
+invocation</panel_attributes>
+    <additional_attributes>230.0;160.0;10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>40</x>
+      <y>370</y>
+      <w>320</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Note:
+bg=white
+
+e.g. call to HealthChecker via:
+
+/jolokia/exec/jolkia-healthcheck:executor/execute/...
+collectionId1/collectionId2/collectionId3 ...
+
+just like any other MBean execution</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>130</y>
+      <w>100</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;240.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>20</x>
+      <y>0</y>
+      <w>740</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+JVM Instance (e.g. Tomcat, JBoss, WebSphere, WLS)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>410</x>
+      <y>230</y>
+      <w>310</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+jolokia-healthchecker-core lib 
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
